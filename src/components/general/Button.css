@@ -10,6 +10,11 @@ button {
     outline: none;
 }
 
+button.active {
+    background: #CDDA8C;
+    pointer-events: none;
+}
+
 button:hover {
     background: #ADD100;
 }

@@ -1,6 +1,44 @@
 import React, { Component } from 'react'
 import Button from './components/general/Button'
-import Product from './components/products/Product'
+import ProductsList from './components/products/ProductsList'
+
+const products = [
+  {
+    id: 1,
+    name: 'Calça Jeans',
+    category: 'calças',
+    originalPrice: 99.90,
+    price: 79.90
+  },
+  {
+    id: 2,
+    name: 'Camisa xadrez',
+    category: 'camisas',
+    originalPrice: 149.90,
+    price: 149.90
+  },
+  {
+    id: 3,
+    name: 'Camisa social bege',
+    category: 'camisas',
+    originalPrice: 169.90,
+    price: 149.90
+  },
+  {
+    id: 4,
+    name: 'Camisa social bege',
+    category: 'camisas',
+    originalPrice: 169.90,
+    price: 149.90
+  },
+  {
+    id: 5,
+    name: 'Touca cinza',
+    category: 'toucas',
+    originalPrice: 99.90,
+    price: 105.00
+  }
+]
 
 class App extends Component{
   render () {
@@ -9,9 +47,7 @@ class App extends Component{
         <Button text="Criar produto"/>
         <Button text="Adicionar produto no carrinho"/>
         <Button text="Remover produto no carrinho"/>
-        <Product name="Dark Robe" category="robes" originalPrice={ 99.99 } price={ 99.90 } />
-        <Product name="Jeans Pants" category="panties" price={ 129.90 } />
-        <Product name="Black Hoodie" category="hoodies" originalPrice={ 110.00 } price={ 105.00 } />
+        <ProductsList products={products}/>
       </div>
     )
   }

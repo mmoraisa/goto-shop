@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './Product.css'
+import { convertToFixedDecimal } from '../../helpers/Utility'
 
 class Product extends Component{
     render () {
@@ -20,12 +21,12 @@ class Product extends Component{
                         originalPrice > price
                         ? (
                             <span>
-                                <del>U$${ originalPrice }</del>
-                                U$${ price }
+                                <del>R${ convertToFixedDecimal(originalPrice) }</del>
+                                R${ convertToFixedDecimal(price) }
                             </span>
                         )
                         : (
-                            <span>U$${ price }</span>
+                            <span>R${ convertToFixedDecimal(price) }</span>
                         )
                     }
                 </div>
